@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { withRouter, Switch, Route } from 'react-router-dom';
 
 import './App.css';
+import Layout from './Layout/index.jsx';
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
-      <React.Fragment>
-        hello
-      </React.Fragment>
+      <Switch>
+        <Route component={Layout} />
+      </Switch>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
