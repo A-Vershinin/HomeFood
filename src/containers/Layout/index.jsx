@@ -11,11 +11,11 @@ class Layout extends PureComponent {
   render() {
 
     return (
-     <div className="page-container">
+     <div className="wrapper">
         <Header />
-        <div>
+        <main>
           <Routes />
-        </div>
+        </main>
         <Footer />
 			</div>
     );

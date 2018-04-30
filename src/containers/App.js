@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import { withRouter, Switch, Route } from 'react-router-dom';
 
-import './App.css';
+import './styles/App.scss';
+import 'font-awesome/css/font-awesome.min.css';
 import Layout from './Layout/index.jsx';
 
 class App extends PureComponent {

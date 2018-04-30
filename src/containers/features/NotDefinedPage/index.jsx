@@ -4,7 +4,7 @@ class NotDefinedPage extends PureComponent {
 
   render() {
     return (
-      <React.Fragment>No found any information</React.Fragment>
+      <React.Fragment><h2>404 error! No this page</h2></React.Fragment>
     );
   }
 
