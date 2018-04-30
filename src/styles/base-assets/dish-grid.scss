@@ -1,0 +1,130 @@
+.dish-grid {
+  background: #fff;
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+}
+
+.dish-grid-block {
+  column-count: 5;
+  column-gap: 16px;
+  margin: 8px 16px;
+  @media only screen and (max-width: 1450px) {
+    column-count: 4;
+    text-align: center;
+  }
+  @media only screen and (max-width: 1200px) {
+    margin: 8px 0;
+    column-count: 3;
+  }
+  @media only screen and (max-width: 910px) {
+    column-count: 2;
+  }
+  @media only screen and (max-width: 615px) {
+    column-count: 1;
+  }
+  .dish-profile-slider__slide {
+    margin: 0;
+    display: inline-block;
+    padding: 10px 0;
+    .dish-card {
+      @media only screen and (max-width: 910px) {
+        margin: 0;
+      }
+    }
+  }
+}
+.chef-rating-title {
+  display: block;
+  width: 100%;
+  font-family: $mainFontRegular;
+  font-size: 14px;
+  font-weight: normal;
+  color: color('coloring-stars');
+  margin-bottom: 5px;
+}
+
+.chef-rating {
+  &.coloring {
+    margin-bottom: 15px;
+    .star-list__item {
+      margin: 0 2px;
+      color: color('coloring-stars');
+    }
+    .star-list__item.secondary {
+      color: color('coloring-stars');
+    }
+    .star-list__item.secondary .fa::before {
+      content: '\f005';
+      color: color('coloring-stars');
+    }
+    .star-list__item.selected .fa::before {
+      content: '\f005';
+      color: color('coloring-stars');
+    }
+    .coment-title {
+      color: color('coloring-stars');
+    }
+  }
+}
+
+.dish-card--grid {
+  width: 258px;
+  margin-bottom: 10px;
+  .dish-card__image {
+    margin-bottom: 20px;
+  }
+  .dish-card__content {
+    width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+
+  .number-spinner {
+    width: 88px;
+    input {
+      width: 30px;
+    }
+  }
+  .btn-add-card {
+    padding: 5px 20px;
+  }
+
+  .dish-card__content p {
+    overflow: hidden;
+    max-height: inherit;
+  }
+  .dish-cost__name {
+    margin-bottom: 10px;
+  }
+}
+.dish-grid-more {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 374px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.68) 24%, rgba(243, 243, 243, 0.86) 48%, rgba(226, 225, 225, 0.83) 74%, #d8d8d8);
+}
+
+.show-more-btn {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  font-family: $mainFontBold;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: left;
+  color: color('mainColor');
+  .fa {
+    font-size: 36px;
+    margin-left: 15px;
+  }
+}

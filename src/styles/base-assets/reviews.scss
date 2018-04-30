@@ -1,0 +1,102 @@
+.reviews {
+  position: relative;
+  z-index: 9;
+  background: color('primary');
+  padding: 70px 35px 45px;
+  box-shadow: 0 0 9px 0 rgba(141, 139, 139, 0.5);
+  @media only screen and (max-width: 1250px) {
+    padding: 70px 0 45px;
+  }
+}
+
+.reviews-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  .flickity-viewport {
+    width: 100%;
+  }
+  .flickity-page-dots {
+    display: none;
+  }
+  .flickity-prev-next-button {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 9;
+    background: transparent;
+    font-size: 0;
+    border-radius: 0;
+    width: 170px;
+    height: 100%;
+    @media only screen and (max-width: 1250px) {
+      display: none;
+    }
+    &.previous {
+      opacity: 1;
+      left: -35px;
+      background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 16%, rgba(255, 255, 255, 0.79) 37%, #ffffff);
+      @extend %default-transition;
+      &::before {
+        content: "\f104";
+        font-family: "FontAwesome";
+        font-size: 64px;
+        color: color('color-arrows');
+      }
+      &:disabled {
+        opacity: 0;
+      }
+    }
+    &.next {
+      opacity: 1;
+      right: -35px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 16%, rgba(255, 255, 255, 0.79) 37%, #ffffff);
+      @extend %default-transition;
+      &::before {
+        content: "\f105";
+        font-family: "FontAwesome";
+        font-size: 64px;
+        color: color('color-arrows');
+      }
+      &:disabled {
+        opacity: 0;
+      }
+    }
+    svg {
+      display: none;
+    }
+  }
+}
+
+.reviews-block__slide {
+  width: 314px;
+  border-radius: 9px;
+  background-color: rgba(94, 54, 123, 0.08);
+  padding: 12px;
+  margin: 0 15px;
+  @media only screen and (max-width: 480px) {
+    width: 280px;
+    margin: 0 5px;
+  }
+}
+
+.reviewers-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+  .image-holder {
+    width: 48.3%;
+    height: 211px;
+    border-radius: 4px;
+    @media only screen and (max-width: 480px) {
+      height: 170px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

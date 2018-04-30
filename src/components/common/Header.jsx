@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-// import './Header.scss';
+
+import logo from '../../img/logo.png';
 
 class Header extends PureComponent {
 	state = {
@@ -30,7 +31,7 @@ class Header extends PureComponent {
 				 <div className="header-content jsOpenMobileMenu">
 					 <div className="location">
 						 <Link to="/" className="logo">
-							 <img src="img/logo.png" alt="" className="logo-image" />
+							 <img src={logo} alt="" className="logo-image" />
 							 <span>HOMEFOOD</span>
 						 </Link>
 						 <form className="search-city" onSubmit={this.handleSubmit}>

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import Main from '../../../components/common/Main/Main.jsx';
+import Main from '../../../components/common/Main.jsx';
 
 
 class MainContainer extends PureComponent {

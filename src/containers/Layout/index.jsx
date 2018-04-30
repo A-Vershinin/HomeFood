@@ -4,8 +4,8 @@ import { withRouter, Switch, Route } from 'react-router-dom';
 
 import Routes from '../Routes';
 
-import Header from '../../components/common/Header/Header.jsx';
-import Footer from '../../components/common/Footer/Footer.jsx';
+import Header from '../../components/common/Header.jsx';
+import Footer from '../../components/common/Footer.jsx';
 
 class Layout extends PureComponent {
   render() {

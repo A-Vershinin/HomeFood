@@ -1,0 +1,25 @@
+.chef-list-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media only screen and (max-width: 1175px) {
+    justify-content: center;
+  }
+  .chef-card-static {
+    margin-bottom: 50px;
+    @media only screen and (max-width: 1175px) {
+      margin: 0 10px;
+      margin-bottom: 50px;
+    }
+  }
+}
+.btn-show-more {
+  font-family: $mainFontBold;
+  font-size: 14px;
+  color: color('primary');
+  border-radius: 4px;
+  background-color: color('mainColor');
+  padding: 16px 41px;
+  margin: 10px auto;
+  display: block;
+}

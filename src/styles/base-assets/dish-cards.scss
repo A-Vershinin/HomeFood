@@ -1,0 +1,195 @@
+.dish-card {
+  width: 848px;
+  min-height: 260px;
+  background-color: #ffffff;
+  box-shadow: 0 0 9px 0 rgba(141, 139, 139, 0.5);
+  padding: 17px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  @media only screen and (max-width: 1175px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 270px;
+    margin: 0 20px 30px;
+  }
+  @media only screen and (max-width: 480px) {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  @media only screen and (max-width: 320px) {
+    width: 100%;
+  }
+  &-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  &__image {
+    width: 235px;
+    height: 226px;
+    position: relative;
+    display: block;
+    @media only screen and (max-width: 320px) {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    flex: 1 1;
+    padding: 0 18px 0 24px;
+    @media only screen and (max-width: 768px) {
+      flex: 1 1 100%;
+      padding: 10px 0 0;
+    }
+    p {
+      max-height: 48px;
+      overflow: hidden;
+    }
+  }
+  &__like {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    font-size: 24px;
+    color: color('primary');
+    opacity: 0.42;
+    cursor: pointer;
+    @extend %default-transition;
+    &.active {
+      opacity: 1;
+      @extend %default-transition;
+    }
+  }
+}
+.chef-info-list {
+  &.dish-card-info-list {
+    margin-bottom: 7px;
+    .chef-info-list__item:nth-child(2) {
+        display: flex;
+        align-items: center;
+    }
+    .chef-info-list__item:nth-child(3) {
+        display: flex;
+        align-items: center;
+    }
+  }
+}
+
+.dish-cost {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  &__name {
+    font-family: $mainFontBold;
+    font-size: 18px;
+    color: color('subTitle');
+    width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media only screen and (max-width: 910px) {
+      width: 200px;
+    }
+  }
+  &__price {
+    font-family: $mainFontBold;
+    font-size: 24px;
+    color: color('mainColor');
+    @media only screen and (max-width: 768px) {
+      margin-left: auto;
+    }
+  }
+}
+
+.dish-chef-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  &__name {
+    font-family: $mainFontRegular;
+    font-size: 14px;
+    color: color('subTitle');
+    margin-right: 19px;
+    display: block;
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+  }
+  .chef-rating {
+    margin-bottom: 0;
+  }
+}
+
+
+.number-spinner {
+  overflow: hidden;
+  border: 1px solid color('mainColor');
+  height: 27px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 98px;
+  input {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    font-family: $mainFontBold;
+    font-size: 14px;
+    color: color('mainColor');
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+  a {
+    width: 28px;
+    text-align: center;
+    background: color('mainColor');
+    display: inline-block;
+    cursor: pointer;
+    height: 100%;
+  }
+  .icon-minus {
+    font-family: $mainFontBold;
+    font-size: 14px;
+    color: color('primary');
+    line-height: 25px;
+  }
+  .icon-plus {
+    font-family: $mainFontBold;
+    font-size: 14px;
+    color: color('primary');
+    line-height: 25px;
+  }
+}
+
+.dish-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-add-card {
+  height: 27px;
+  border-radius: 4px;
+  background-color: color('mainColor');
+  font-family: $mainFontRegular;
+  font-size: 14px;
+  color: color('primary');
+  padding: 5px 38px;
+  @media only screen and (max-width: 768px) {
+    padding: 5px 20px;
+  }
+}

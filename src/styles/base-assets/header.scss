@@ -271,7 +271,7 @@
     }
   }
 }
-
+/*END:header*/
 
 /*first page header*/
 .header-first-page {
@@ -501,7 +501,8 @@
     font-size: 14px;
     padding: 12px 44px;
     white-space: nowrap;
-    background: url('../img/background-green-big.jpg') no-repeat center center;
+    // background: url('../../img/background-green-big.jpg') no-repeat center center;
+    // background: url('../img/background-green-big.jpg') no-repeat center center;
     background-size: cover;
   }
   .flickity-slider {
@@ -560,3 +561,4 @@
     }
   }
 }
+/*END: first page header*/
