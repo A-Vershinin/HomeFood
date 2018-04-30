@@ -9,7 +9,7 @@ import Footer from '../../components/common/Footer.jsx';
 
 class Layout extends PureComponent {
   render() {
-
+    
     return (
      <div className="wrapper">
         <Header />
