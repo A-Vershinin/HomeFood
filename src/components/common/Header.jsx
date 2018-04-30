@@ -4,6 +4,27 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../../img/logo.png';
 
 class Header extends PureComponent {
+	static propTypes = {
+	// 		fetchItems: PropTypes.func.isRequired,
+	// 		sorting: PropTypes.string.isRequired,
+	// 		currentPage: PropTypes.number.isRequired,
+	// 		pageCount: PropTypes.number.isRequired,
+	// 		setCurrentPage: PropTypes.func.isRequired,
+	// 		resultsPerPage: PropTypes.number.isRequired,
+	// 		isInitialized: PropTypes.bool.isRequired,
+	// 		isFiltersMenuInitialized: PropTypes.bool.isRequired,
+	// 		pending: PropTypes.bool.isRequired,
+	// 		listItemRenderer: PropTypes.func.isRequired,
+	// 		searchData: PropTypes.any.isRequired,
+	// 		searchDataUpdatesChecker: PropTypes.func.isRequired,
+	// 		items: PropTypes.arrayOf(PropTypes.any),
+	// 		noResultsComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+	};
+
+	static defaultProps = {
+		search: '',
+	};
+
 	state = {
 		search: '',
 	};
