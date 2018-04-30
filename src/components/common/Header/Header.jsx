@@ -1,11 +1,10 @@
 import React, { PureComponent } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import './Header.scss';
+// import './Header.scss';
 
 class Header extends PureComponent {
 	state = {
 		search: '',
-		navList: [],
 	};
 
 	handleChange = event => {
@@ -31,7 +30,7 @@ class Header extends PureComponent {
 				 <div className="header-content jsOpenMobileMenu">
 					 <div className="location">
 						 <Link to="/" className="logo">
-							 <img src="img/logo.png" alt="image" className="logo-image" />
+							 <img src="img/logo.png" alt="" className="logo-image" />
 							 <span>HOMEFOOD</span>
 						 </Link>
 						 <form className="search-city" onSubmit={this.handleSubmit}>

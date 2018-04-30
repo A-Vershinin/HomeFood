@@ -2,11 +2,11 @@
 
 @include font-face('Arial', 'Regular');
 @include font-face('Arial', 'Bold');
-@include font-face('Arial', 'Italik');
+@include font-face('Arial', 'Italic');
 
 @include font-face('OpenSans', 'Regular');
 @include font-face('OpenSans', 'Bold');
-@include font-face('OpenSans', 'Italik');
+@include font-face('OpenSans', 'Italic');
 
 $mainFontRegular: 'Arial-Regular', sans-serif;
 $mainFontBold: 'Arial-Bold', sans-serif;
@@ -15,6 +15,3 @@ $mainFontItalik: 'Arial-Italik', sans-serif;
 $extraFontRegular: 'OpenSans-Regular', sans-serif;
 $extraFontBold: 'OpenSans-Bold', sans-serif;
 $extraFontItalik: 'OpenSans-Italik', sans-serif;
-
-
-
