@@ -1,28 +1,19 @@
 import React, { PureComponent } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-
+import PropTypes from 'prop-types';
 import logo from '../../img/logo.png';
 
 class Header extends PureComponent {
 	static propTypes = {
-	// 		fetchItems: PropTypes.func.isRequired,
-	// 		sorting: PropTypes.string.isRequired,
-	// 		currentPage: PropTypes.number.isRequired,
-	// 		pageCount: PropTypes.number.isRequired,
-	// 		setCurrentPage: PropTypes.func.isRequired,
-	// 		resultsPerPage: PropTypes.number.isRequired,
-	// 		isInitialized: PropTypes.bool.isRequired,
-	// 		isFiltersMenuInitialized: PropTypes.bool.isRequired,
-	// 		pending: PropTypes.bool.isRequired,
-	// 		listItemRenderer: PropTypes.func.isRequired,
-	// 		searchData: PropTypes.any.isRequired,
-	// 		searchDataUpdatesChecker: PropTypes.func.isRequired,
-	// 		items: PropTypes.arrayOf(PropTypes.any),
-	// 		noResultsComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+		items: PropTypes.shape({
+			nav: PropTypes.arrayOf(PropTypes.any),
+			accounts: PropTypes.arrayOf(PropTypes.any),
+		}).isRequired,
+		// searchCity: PropTypes.func.isRequired,
 	};
 
 	static defaultProps = {
-		search: '',
+		items: {},
 	};
 
 	state = {
@@ -41,6 +32,7 @@ class Header extends PureComponent {
 
 
 	render() {
+		const { nav, accounts } = this.props.items;
 		const { search } = this.state;
 
 		return (
@@ -67,22 +59,29 @@ class Header extends PureComponent {
 					 </div>
 					 <nav className="nav">
 						 <ul className="nav-list">
-							<li className="nav-list__item">
-								<NavLink to="/dishes-list" className="nav-list__link">DISHES</NavLink>
-							</li>
-							<li className="nav-list__item">
-							 	<NavLink to="/chefs-list" className="nav-list__link">CHEFS</NavLink>
-							</li>
+						 {
+ 							nav.map((elem, index) => {
+ 								return (
+ 								 <li key={index} className="nav-list__item">
+ 									 <NavLink to={elem.url} className="nav-list__link">{elem.text}</NavLink>
+ 								 </li>
+	 								)
+	 							})
+ 							}
 						 </ul>
 					 </nav>
 					 <div className="accounts">
 						 <ul className="accounts-list">
-							<li className="accounts-list__item" activeclassname='active'>
-								<NavLink to="/chef-profile" className="accounts-list__link">Become a chef</NavLink>
-							</li>
-							<li className="accounts-list__item">
-								<NavLink to="/my-account" className="accounts-list__link" activeclassname='active'>My account</NavLink>
-							</li>
+							 {
+	 							nav.map((elem, index) => {
+	 								return (
+										<li key={index} className="accounts-list__item">
+											<NavLink to={elem.url} className="accounts-list__link"
+											activeclassname='active'>{elem.text}</NavLink>
+										</li>
+		 								)
+		 							})
+	 							}
 						 </ul>
 					 </div>
 				 </div>

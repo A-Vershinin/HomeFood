@@ -11,7 +11,14 @@ class Layout extends PureComponent {
 
   state = {
     header: {
-      
+      nav: [
+        { url: '/dishes-list', text: 'DISHES' },
+        { url: '/chefs-list', text: 'CHEFS' },
+      ],
+      accounts: [
+        { url: '/chef-profile', text: 'Become a chef' },
+        { url: '/my-account', text: 'My account' },
+      ],
     },
     footer: {
       about: [
@@ -28,7 +35,7 @@ class Layout extends PureComponent {
 
     return (
      <div className="wrapper">
-        <Header />
+        <Header items={this.state.header}/>
         <main>
           <Routes />
         </main>
