@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import logo from '../../img/logo.png';
+import Search from '../../containers/common/Search/index.jsx';
 
 class Header extends PureComponent {
 	static propTypes = {
@@ -9,31 +10,14 @@ class Header extends PureComponent {
 			nav: PropTypes.arrayOf(PropTypes.any),
 			accounts: PropTypes.arrayOf(PropTypes.any),
 		}).isRequired,
-		// searchCity: PropTypes.func.isRequired,
 	};
 
 	static defaultProps = {
 		items: {},
 	};
 
-	state = {
-		search: '',
-	};
-
-	handleChange = event => {
-		this.setState({ search:  event.target.value});
-	}
-
-	handleSubmit = event => {
-		event.preventDefault();
-		// console.log(this.state.search)
-		// this.props.searchCity(this.state.search)
-	};
-
-
 	render() {
 		const { nav, accounts } = this.props.items;
-		const { search } = this.state;
 
 		return (
 		 <header id="header" className="site-header">
@@ -47,15 +31,7 @@ class Header extends PureComponent {
 							 <img src={logo} alt="" className="logo-image" />
 							 <span>HOMEFOOD</span>
 						 </Link>
-						 <form className="search-city" onSubmit={this.handleSubmit}>
-							 <label htmlFor="search">
-								 <i className="fa fa-map-marker" aria-hidden="true" />
-							 </label>
-							 <input id="search" type="text" placeholder="City" value={search} onChange={this.handleChange}/>
-							 <button className="serch-btn">
-								 <i className="fa fa-search" aria-hidden="true" />
-							 </button>
-						 </form>
+						 <Search />
 					 </div>
 					 <nav className="nav">
 						 <ul className="nav-list">
@@ -73,7 +49,7 @@ class Header extends PureComponent {
 					 <div className="accounts">
 						 <ul className="accounts-list">
 							 {
-	 							nav.map((elem, index) => {
+	 							accounts.map((elem, index) => {
 	 								return (
 										<li key={index} className="accounts-list__item">
 											<NavLink to={elem.url} className="accounts-list__link"
