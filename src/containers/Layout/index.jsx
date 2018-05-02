@@ -36,7 +36,7 @@ class Layout extends PureComponent {
     return (
      <div className="wrapper">
         <Header items={this.state.header}/>
-        <main>
+        <main className='main'>
           <Routes />
         </main>
         <Footer items={this.state.footer}/>

@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 class Search extends PureComponent {
   static propTypes = {
-    // searchCity: PropTypes.func.isRequired,
+    onHandleChange: PropTypes.func.isRequired,
+    onHandleSubmit: PropTypes.func.isRequired,
   };
 
   render() {

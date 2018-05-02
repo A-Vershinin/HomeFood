@@ -1,13 +1,15 @@
 import React, { PureComponent } from 'react';
 
-import Main from '../../common/Main/index.jsx';
+// import Main from '../../common/Main/index.jsx';
+import Banner from '../../../components/common/Banner.jsx';
 
 class HomePage extends PureComponent {
 
 	render() {
 		return (
 			<React.Fragment>
-				<Main />
+		    <Banner />
+
 			</React.Fragment>
 		);
 	}
